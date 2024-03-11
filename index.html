@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Igra memorije</title>
+        <link rel="stylesheet" href="styles/style.css">
+    </head>
+
+    <body>
+        <div class="row">
+            <div class="col-8 igra">
+                <div class="igra-naslov">
+                    <h1>Igra memorije</h1>
+                    <p>Vreme: <span id="vreme">0</span></p>
+                </div>
+
+                <section class="input-igra">
+                    <div class="input-name">
+                        <input type="text" name="ime" id="ime" placeholder="Unesite ime">
+                    </div>
+        
+                    <div class="radio-igra">
+                        <input type="radio" name="tezina-igra" id="lako-igra" value="lako-igra" checked>
+                        <label for="lako-igra">Lako</label>
+            
+                        <input type="radio" name="tezina-igra" id="srednje-igra" value="srednje-igra">
+                        <label for="srednje-igra">Srednje</label>
+            
+                        <input type="radio" name="tezina-igra" id="tesko-igra" value="tesko-igra">
+                        <label for="tesko-igra">Teško</label>
+            
+                        <input type="radio" name="tezina-igra" id="ekspert-igra" value="ekspert-igra">
+                        <label for="ekspert-igra">Ekspert</label>
+        
+                        <input type="button" value="Restart" id="restart">
+                    </div>
+                </section>
+
+                <div class="tabla-container"></div>
+            </div>
+
+            <div class="col-4 rezultati">
+                <div class="rezultati-naslov">
+                    <h1>Najbolji rezultati</h1>
+                </div>
+
+                <div class="radio-rezultati">
+                    <input type="radio" name="tezina-rezultati" id="lako-rezultati" value="lako-rezultati" checked>
+                    <label for="lako-rezultati">Lako</label>
+        
+                    <input type="radio" name="tezina-rezultati" id="srednje-rezultati" value="srednje-rezultati">
+                    <label for="srednje-rezultati">Srednje</label>
+        
+                    <input type="radio" name="tezina-rezultati" id="tesko-rezultati" value="tesko-rezultati">
+                    <label for="tesko-rezultati">Teško</label>
+        
+                    <input type="radio" name="tezina-rezultati" id="ekspert-rezultati" value="ekspert-rezultati">
+                    <label for="ekspert-rezultati">Ekspert</label>
+                </div>
+
+                <div class="tabela">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Mesto</th>
+                                <th>Korisničko ime</th>
+                                <th>Vreme</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1.</td>
+                                <td id="td-0-2"></td>
+                                <td id="td-0-3"></td>
+                            </tr>
+                            <tr>
+                                <td>2.</td>
+                                <td id="td-1-2"></td>
+                                <td id="td-1-3"></td>
+                            </tr>
+                            <tr>
+                                <td>3.</td>
+                                <td id="td-2-2"></td>
+                                <td id="td-2-3"></td>
+                            </tr>
+                            <tr>
+                                <td>4.</td>
+                                <td id="td-3-2"></td>
+                                <td id="td-3-3"></td>
+                            </tr>
+                            <tr>
+                                <td>5.</td>
+                                <td id="td-4-2"></td>
+                                <td id="td-4-3"></td>
+                            </tr>
+                            <tr>
+                                <td>6.</td>
+                                <td id="td-5-2"></td>
+                                <td id="td-5-3"></td>
+                            </tr>
+                            <tr>
+                                <td>7.</td>
+                                <td id="td-6-2"></td>
+                                <td id="td-6-3"></td>
+                            </tr>
+                            <tr>
+                                <td>8.</td>
+                                <td id="td-7-2"></td>
+                                <td id="td-7-3"></td>
+                            </tr>
+                            <tr>
+                                <td>9.</td>
+                                <td id="td-8-2"></td>
+                                <td id="td-8-3"></td>
+                            </tr>
+                            <tr>
+                                <td>10.</td>
+                                <td id="td-9-2"></td>
+                                <td id="td-9-3"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+        </div>
+
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-firestore.js"></script>
+        <script>
+            const firebaseConfig = {
+                /* apiKey: **********************************/
+                /* authDomain: ******************************/
+                /* projectId: *******************************/
+                /* storageBucket: ***************************/
+                /* messagingSenderId: ***********************/
+                /* appId: ***********************************/
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+            let db = firebase.firestore();
+        </script>
+
+        <script type="module" src="main.js"></script>
+    </body>
+</html>

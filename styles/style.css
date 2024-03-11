@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 1em;
+}
+
+.tabla-container {
+    margin-top: 1em;
+    width: 100%;
+}
+
+.slike-container {
+    max-width: 600px;
+    width: 80%;
+    display: grid;
+    grid-gap: 0.4em;
+}
+
+.img-card {
+    border-radius: 0.5em;
+    width: 100%;
+    height: 100%;
+}
+
+table, th, td {
+    border: 1px solid;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+
+.row {
+    width: 100%;
+    overflow: hidden;
+}
+
+@media only screen and (max-width: 999px) {
+    .col-8, .col-4 {
+        width: 100%;
+    }
+
+    .rezultati {
+        margin-top: 1em;
+    }
+
+    .slike-container {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .col-8, .col-4 {
+        float: left;
+    }
+
+    .col-8 {
+        width: calc((100% / 3) * 2);
+    }
+
+    .col-4 {
+        width: calc(100% / 3);
+    }
+
+    .radio-rezultati {
+        margin-top: 3em;
+    }
+}
